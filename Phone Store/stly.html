@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHONE HUB | Premium Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2 class="logo">PHONE<span>HUB.</span></h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <button class="cart-btn" onclick="toggleCart()">
+            🛒 Cart <span id="cart-count">0</span>
+        </button>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="small-title">THE FUTURE IS HERE</p>
+        <h1>Discover Your<br>Next <span>Smartphone.</span></h1>
+        <p>Explore the latest smartphones with premium
+        quality and incredible technology.</p>
+        <a href="#products" class="shop-btn">Shop Now →</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=700"
+             alt="Premium smartphone">
+    </div>
+</section>
+
+<section class="features">
+    <div>🚚 <h3>Free Delivery</h3><p>Fast delivery service</p></div>
+    <div>🛡️ <h3>Warranty</h3><p>Trusted products</p></div>
+    <div>💳 <h3>Secure Payment</h3><p>Safe shopping</p></div>
+    <div>⭐ <h3>Best Quality</h3><p>Premium devices</p></div>
+</section>
+
+<section class="products-section" id="products">
+    <div class="section-heading">
+        <p>OUR COLLECTION</p>
+        <h2>Explore Our Products</h2>
+    </div>
+
+    <div class="controls">
+        <input type="text" id="search"
+               placeholder="Search your phone..."
+               oninput="displayProducts()">
+
+        <select id="category" onchange="displayProducts()">
+            <option value="All">All Phones</option>
+            <option value="Apple">Apple</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Google">Google</option>
+        </select>
+    </div>
+
+    <div class="product-grid" id="product-list"></div>
+</section>
+
+<section class="about" id="about">
+    <h2>Why Choose PHONE HUB?</h2>
+    <p>We bring you modern smartphones, trusted quality,
+       excellent service and a better shopping experience.</p>
+</section>
+
+<footer>
+    <h2>PHONE<span>HUB.</span></h2>
+    <p>© 2026 PHONE HUB. All Rights Reserved.</p>
+</footer>
+
+<div class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button onclick="toggleCart()">✕</button>
+    </div>
+    <div id="cart-items"></div>
+    <h3>Total: $<span id="total">0</span></h3>
+    <button class="checkout" onclick="checkout()">Checkout</button>
+</div>
+
+<script src="./main.js"></script>
+</body>
+</html>
